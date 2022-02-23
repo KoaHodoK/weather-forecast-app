@@ -21,9 +21,9 @@ Widget forecastCard(AsyncSnapshot<WeatherForecastModel> snapshot, int index) {
           weatherDesc: forecastlist[index].weather![0].main.toString(),
           color: Colors.white,
           size: 35),
+      const SizedBox(height: 3),
       Text("Max :${forecastlist[index].temp!.max!.toStringAsFixed(0)} °F"),
       Text("Min :${forecastlist[index].temp!.min!.toStringAsFixed(0)} °F"),
-      Text("Hum :${forecastlist[index].humidity.toString} %"),
       Text("Wind :${forecastlist[index].speed} min/h")
     ],
   );
